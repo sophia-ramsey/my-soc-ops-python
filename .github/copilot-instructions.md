@@ -29,6 +29,20 @@ uv run pytest         # test: all 25 tests must pass
 | `app/static/css/app.css` | Custom utility classes — see [css-utilities.instructions.md](instructions/css-utilities.instructions.md) |
 | `tests/` | `test_api.py` (TestClient) + `test_game_logic.py` (unit) |
 
+## Design Guide
+
+Use this visual direction for frontend work unless a task explicitly asks for a different style:
+
+- **Creative direction** — playful, feminine, high-energy, and polished ("pop princess" vibe).
+- **Avoid generic UI** — skip default-looking layouts and overused aesthetics.
+- **Typography** — choose expressive fonts; avoid default stacks like Inter/Roboto/Arial unless preserving an existing pattern.
+- **Color system** — define clear CSS variables and a cohesive palette with strong contrast.
+- **Motion** — prefer a few meaningful animations (page load, staggered reveals) over many micro-animations.
+- **Backgrounds** — avoid flat single-color pages; use gradients/shapes/patterns to add atmosphere.
+- **Responsiveness** — mobile-first by default; verify layouts on both phone and desktop.
+- **Accessibility** — keep readable hierarchy, clear contrast, and usable spacing.
+- **Consistency rule** — when editing existing screens, preserve established structure and interaction patterns.
+
 ## Conventions & Pitfalls
 
 - **Frozen models** — use `.model_copy(update={...})`, never `.copy()`.
